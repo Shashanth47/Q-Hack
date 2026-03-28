@@ -65,7 +65,7 @@ Perform measurement
 
 
 
-🔹 Level 2 – Quantum Multiplexer 🔀
+#🔹 Level 2 – Quantum Multiplexer 🔀
 🧠 Description
 
 Implements a 4×1 Multiplexer (MUX) using quantum logic.
@@ -96,7 +96,7 @@ Implement MUX using reversible gates
 
 
 
-🔹 Level 3 – Bloch Sphere Visualization 🌐
+#🔹 Level 3 – Bloch Sphere Visualization 🌐
 🧠 Description
 
 Visualizes quantum states on the Bloch Sphere using QuTiP.
@@ -126,7 +126,7 @@ Learn geometric interpretation
 
 
 
-🔹 Level 4 – BB84 Protocol 🔐
+#🔹 Level 4 – BB84 Protocol 🔐
 🧠 Description
 
 Implements quantum key distribution using BB84 protocol.
@@ -159,7 +159,7 @@ Eve detection
 
 
 
-🔹 Level 5 – QRISC Processor 🧩
+#🔹 Level 5 – QRISC Processor 🧩
 🧠 Description
 
 Implements a quantum-inspired processor architecture.
