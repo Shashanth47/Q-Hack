@@ -44,7 +44,7 @@ This level focuses on **basic quantum circuit construction** using multiple qubi
 
 ---
 
-#🔹 Level 2 – Quantum Multiplexer 🔀
+# 🔹 Level 2 – Quantum Multiplexer 🔀
 ##🧠 Description
 
 Implements a 4×1 Multiplexer (MUX) using quantum logic.
