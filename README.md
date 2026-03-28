@@ -1,109 +1,208 @@
-Q-Hack Repository Documentation
-📌 1. Repository Overview
+# 🚀 Q-Hack
 
-This repository contains multiple quantum computing experiments implemented using Qiskit and QuTiP, organized into five levels. Each notebook explores a different concept in quantum computation, ranging from basic circuit design to quantum communication and processor simulation.
+## 🧠 Overview
 
-📁 2. File Inventory
-🔹 Level1.ipynb
+This repository is a **notebook-first quantum computing project** covering multiple levels of complexity:
 
-Implements a 4-bit Reversible Ripple Carry Adder (RCA) using quantum gates.
+- ⚛️ Quantum Circuit Design  
+- 🔀 Quantum Multiplexer (MUX)  
+- 🌐 Bloch Sphere Visualization  
+- 🔐 Quantum Cryptography (BB84)  
+- 🧩 Quantum Processor Architecture (QRISC)  
 
-Qubits: 13
-Classical bits: 5
-Gates used: x, cx, ccx
-Purpose:
-Demonstrates reversible computation
-Implements binary addition using quantum logic
-Measures output and verifies correctness
-🔹 Level2.ipynb
+All implementations are done using **Qiskit, QuTiP, and Python** inside Jupyter notebooks.
 
-Implements a quantum multiplexer-like circuit.
+---
 
-Qubits: 7
-Gates used: x, mcx
-Purpose:
-Encodes selection logic using multi-controlled gates
-Simulates conditional routing of quantum data
-Outputs selected value via measurement
-🔹 Level3.ipynb
+## 📂 Repository Structure
 
-Analyzes quantum states on the Bloch sphere using QuTiP.
+- 📄 README.md  
+- 📓 Level1.ipynb  
+- 📓 Level2.ipynb  
+- 📓 Level3.ipynb  
+- 📓 Level4.ipynb  
+- 📓 Level5.ipynb  
 
-States used:
-ψ₁ = (|0⟩ + |1⟩)/√2
-ψ₂ = (|0⟩ − |1⟩)/√2
-Libraries:
-basis, sigmax, sigmay, sigmaz, expect, Bloch
-Purpose:
-Converts quantum states to Bloch coordinates
-Visualizes them on the Bloch sphere
-Verifies orthogonality using inner product
-🔹 Level4.ipynb
+---
 
-Simulates a BB84 Quantum Key Distribution protocol.
+# 🔹 Level 1 – Quantum Circuit Basics ⚛️
 
-Libraries:
-QuantumCircuit, Aer, random
-Purpose:
-Models Alice, Eve, and Bob interactions
-Simulates basis selection and measurement
-Demonstrates quantum security principles
-🔹 Level5.ipynb
+## 🧠 Description
 
-Implements a QRISC-style Quantum Processor Simulator.
+This level focuses on **basic quantum circuit construction** using multiple qubits and gates.
 
-Core Class: QRISCProcessor
-Key Features:
-Instruction execution loop
-Opcode mapping
-Register management
-Flag handling (Z, P, C)
-Purpose:
-Simulates a simplified quantum instruction processor
-Bridges classical architecture with quantum circuits
-🧠 3. Architecture Overview
+---
 
-The repository follows a progressive learning structure:
+## ⚙️ What is Done
 
-Level 1 → Quantum Arithmetic
-Level 2 → Quantum Control Logic
-Level 3 → Quantum State Visualization
-Level 4 → Quantum Communication
-Level 5 → Quantum Processor Simulation
+- Create a multi-qubit circuit  
+- Apply:
+  - `X` gate (NOT)
+  - `CX` gate (Controlled NOT)
+  - `CCX` (Toffoli gate)  
+- Measure qubits  
 
-Each level builds on conceptual understanding rather than shared code dependencies.
+---
 
-🔄 4. Data Flow
-Input → Quantum Circuit → Gate Operations → Measurement → Classical Output
-Level 1 & 2: Logic-based circuit execution
-Level 3: State → Bloch transformation
-Level 4: Randomized protocol simulation
-Level 5: Instruction → Execution → State update
-⚙️ 5. State Management
-Notebook-based execution (cell order matters)
-Variables persist within notebook sessions
-Outputs are stored alongside code (Jupyter JSON format)
-Special Case: Level 5
-Uses explicit state variables:
-pc (program counter)
-reg (registers)
-Z, P, C (flags)
-📦 6. Dependencies
+## 💻 Code Used
 
-The project uses:
+python
+from qiskit import QuantumCircuit
 
-qiskit
-qiskit-aer
-qutip
-matplotlib
-numpy
-random (standard library)
+qc = QuantumCircuit(13, 5)
 
-Dependencies are directly imported in notebooks (no requirements.txt)
+qc.x(0)
+qc.cx(0, 1)
+qc.ccx(0, 1, 2)
 
-🎯 7. Key Highlights
-Demonstrates reversible computation
-Implements quantum control logic
-Visualizes quantum states geometrically
-Simulates quantum cryptography
-Prototypes a quantum processor model
+qc.measure([0,1,2,3,4], [0,1,2,3,4])
+print(qc)
+🎯 Outcome
+Understand multi-qubit operations
+Learn basic quantum gates
+Perform measurement
+
+
+
+
+🔹 Level 2 – Quantum Multiplexer 🔀
+🧠 Description
+
+Implements a 4×1 Multiplexer (MUX) using quantum logic.
+
+⚙️ Logic
+s1 s0 → output
+00 → d0
+01 → d1
+10 → d2
+11 → d3
+💻 Code Used
+from qiskit import QuantumCircuit
+
+qc = QuantumCircuit(7, 1)
+
+# Example inputs
+qc.x(0)  # d0 = 1
+qc.x(4)  # s0 = 1
+
+# Controlled logic
+qc.ccx(4, 5, 6)
+
+qc.measure(6, 0)
+print(qc)
+🎯 Outcome
+Understand quantum control logic
+Implement MUX using reversible gates
+
+
+
+🔹 Level 3 – Bloch Sphere Visualization 🌐
+🧠 Description
+
+Visualizes quantum states on the Bloch Sphere using QuTiP.
+
+⚙️ What is Done
+Create quantum states
+Compute expectation values
+Plot Bloch sphere
+💻 Code Used
+from qutip import basis, Bloch
+
+b = Bloch()
+
+zero = basis(2,0)
+one = basis(2,1)
+
+b.add_states(zero)
+b.add_states(one)
+
+b.show()
+🎯 Outcome
+Visual understanding of:
+Superposition
+Quantum states
+Learn geometric interpretation
+
+
+
+
+🔹 Level 4 – BB84 Protocol 🔐
+🧠 Description
+
+Implements quantum key distribution using BB84 protocol.
+
+⚙️ What is Done
+Alice sends qubits
+Eve intercepts (optional)
+Bob measures
+Error detection using QBER
+💻 Code Used
+import random
+
+alice_bits = [random.randint(0,1) for _ in range(10)]
+alice_bases = [random.randint(0,1) for _ in range(10)]
+bob_bases = [random.randint(0,1) for _ in range(10)]
+
+shared_key = []
+
+for i in range(10):
+    if alice_bases[i] == bob_bases[i]:
+        shared_key.append(alice_bits[i])
+
+print("Shared Key:", shared_key)
+🎯 Outcome
+Understand quantum cryptography
+Learn about:
+QBER (error rate)
+Eve detection
+
+
+
+
+🔹 Level 5 – QRISC Processor 🧩
+🧠 Description
+
+Implements a quantum-inspired processor architecture.
+
+⚙️ Features
+8-bit instruction format
+Fetch → Decode → Execute pipeline
+MAC unit
+Flags (Z, P, C)
+Hazard detection
+Branching
+💻 Code Used
+from qiskit import QuantumCircuit
+
+class QRISCProcessor:
+    def __init__(self):
+        self.qc = QuantumCircuit(8, 8)
+        self.pc = 0
+        self.reg = [0]*8
+
+    def execute(self, opcode, q1, q2, q3):
+        if opcode == "00":
+            self.qc.h(q1)
+        elif opcode == "01":
+            self.qc.x(q1)
+        elif opcode == "10":
+            self.qc.cx(q1, q2)
+
+processor = QRISCProcessor()
+🎯 Outcome
+Understand:
+Instruction decoding
+Processor pipeline
+Hybrid quantum-classical systems
+⚙️ How to Run ▶️
+pip install qiskit qiskit-aer qutip matplotlib numpy
+
+Then open notebooks:
+
+jupyter notebook
+📊 What This Project Covers
+⚛️ Quantum circuits
+🔀 Combinational logic (MUX)
+🌐 Visualization
+🔐 Cryptography
+🧩 Processor design
