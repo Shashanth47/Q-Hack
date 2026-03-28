@@ -46,7 +46,7 @@ This level focuses on **basic quantum circuit construction** using multiple qubi
 
 ## 💻 Code Used
 
-```python
+
 from qiskit import QuantumCircuit
 
 qc = QuantumCircuit(13, 5)
