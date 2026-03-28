@@ -113,7 +113,9 @@ Alice sends qubits
 Eve intercepts (optional)
 Bob measures
 Error detection using QBER
+---
 Condition used if if QBER > 2 it is eve eroor and if not it is natural error
+---
 💻 Code Used
 import random
 
