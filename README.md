@@ -72,6 +72,9 @@ print(qc)
 🎯 Outcome
 Understand quantum control logic
 Implement MUX using reversible gates
+
+
+
 ---
 #🔹 Level 3 – Bloch Sphere Visualization 🌐
 ##🧠 Description
@@ -99,11 +102,12 @@ Visual understanding of:
 Superposition
 Quantum states
 Learn geometric interpretation
-🔹 Level 4 – BB84 Protocol 🔐
-🧠 Description
+---
+#🔹 Level 4 – BB84 Protocol 🔐
+##🧠 Description
 
 Implements quantum key distribution using BB84 protocol.
-
+---
 ⚙️ What is Done
 Alice sends qubits
 Eve intercepts (optional)
@@ -128,11 +132,12 @@ Understand quantum cryptography
 Learn about:
 QBER (error rate)
 Eve detection
-🔹 Level 5 – QRISC Processor 🧩
-🧠 Description
+---
+#🔹 Level 5 – QRISC Processor 🧩
+##🧠 Description
 
 Implements a quantum-inspired processor architecture.
-
+---
 ⚙️ Features
 8-bit instruction format
 Fetch → Decode → Execute pipeline
