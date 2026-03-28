@@ -61,8 +61,9 @@ print(qc)
 Understand multi-qubit operations
 Learn basic quantum gates
 Perform measurement
-🔹 Level 2 – Quantum Multiplexer 🔀
-🧠 Description
+
+#🔹 Level 2 – Quantum Multiplexer 🔀
+##🧠 Description
 
 Implements a 4×1 Multiplexer (MUX) using quantum logic.
 
