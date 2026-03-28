@@ -44,24 +44,6 @@ This level focuses on **basic quantum circuit construction** using multiple qubi
 
 ---
 
-## 💻 Code Used
-
-
-from qiskit import QuantumCircuit
-
-qc = QuantumCircuit(13, 5)
-
-qc.x(0)
-qc.cx(0, 1)
-qc.ccx(0, 1, 2)
-
-qc.measure([0,1,2,3,4], [0,1,2,3,4])
-print(qc)
-🎯 Outcome
-Understand multi-qubit operations
-Learn basic quantum gates
-Perform measurement
-
 #🔹 Level 2 – Quantum Multiplexer 🔀
 ##🧠 Description
 
