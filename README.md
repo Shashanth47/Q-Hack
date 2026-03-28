@@ -48,7 +48,7 @@ This level focuses on **basic quantum circuit construction** using multiple qubi
 ##🧠 Description
 
 Implements a 4×1 Multiplexer (MUX) using quantum logic.
-
+---
 ⚙️ Logic
 s1 s0 → output
 00 → d0
@@ -72,11 +72,12 @@ print(qc)
 🎯 Outcome
 Understand quantum control logic
 Implement MUX using reversible gates
-🔹 Level 3 – Bloch Sphere Visualization 🌐
-🧠 Description
+---
+#🔹 Level 3 – Bloch Sphere Visualization 🌐
+##🧠 Description
 
 Visualizes quantum states on the Bloch Sphere using QuTiP.
-
+---
 ⚙️ What is Done
 Create quantum states
 Compute expectation values
