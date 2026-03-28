@@ -62,7 +62,7 @@ Understand multi-qubit operations
 Learn basic quantum gates
 Perform measurement
 
-
+---
 
 
 #🔹 Level 2 – Quantum Multiplexer 🔀
@@ -94,7 +94,7 @@ print(qc)
 Understand quantum control logic
 Implement MUX using reversible gates
 
-
+---
 
 #🔹 Level 3 – Bloch Sphere Visualization 🌐
 🧠 Description
