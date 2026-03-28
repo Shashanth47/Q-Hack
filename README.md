@@ -45,7 +45,7 @@ This level focuses on **basic quantum circuit construction** using multiple qubi
 ---
 
 # 🔹 Level 2 – Quantum Multiplexer 🔀
-##🧠 Description
+## 🧠 Description
 
 Implements a 4×1 Multiplexer (MUX) using quantum logic.
 ---
@@ -76,8 +76,8 @@ Implement MUX using reversible gates
 
 
 ---
-#🔹 Level 3 – Bloch Sphere Visualization 🌐
-##🧠 Description
+# 🔹 Level 3 – Bloch Sphere Visualization 🌐
+## 🧠 Description
 
 Visualizes quantum states on the Bloch Sphere using QuTiP.
 ---
@@ -103,8 +103,8 @@ Superposition
 Quantum states
 Learn geometric interpretation
 ---
-#🔹 Level 4 – BB84 Protocol 🔐
-##🧠 Description
+# 🔹 Level 4 – BB84 Protocol 🔐
+## 🧠 Description
 
 Implements quantum key distribution using BB84 protocol.
 ---
@@ -133,8 +133,8 @@ Learn about:
 QBER (error rate)
 Eve detection
 ---
-#🔹 Level 5 – QRISC Processor 🧩
-##🧠 Description
+# 🔹 Level 5 – QRISC Processor 🧩
+## 🧠 Description
 
 Implements a quantum-inspired processor architecture.
 ---
